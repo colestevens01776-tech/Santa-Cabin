@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santa's Cabin App</title>
+
+    <style>
+        /* Chunky holiday font and clean reading font */
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+        /* Deep cozy forest green background */
+        body {
+            background-color: #0f2b1d; 
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Your massive, beefed-up festive title */
+        .santa-cabin-title {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 4.5rem; 
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #d62222; /* Christmas Red */
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            
+            /* White border + gold fireplace glow */
+            text-shadow: 
+                -4px -4px 0 #fff, 4px -4px 0 #fff, -4px 4px 0 #fff, 4px 4px 0 #fff,
+                -6px -6px 0 #fff, 6px -6px 0 #fff, -6px 4px 0 #fff, 6px 6px 0 #fff,
+                0px 0px 30px #ffd700, 0px 0px 10px #ffd700; 
+        }
+
+        .subtitle {
+            color: #ffd700;
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+        }
+
+        /* The Cabin Desk Container */
+        .desk-container {
+            background-color: #4a2c11; /* Warm wood color */
+            border: 8px solid #36200c;
+            border-radius: 15px;
+            padding: 30px;
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.6);
+        }
+
+        /* The Interactive Book Button */
+        .book-btn {
+            background-color: #b71c1c;
+            color: white;
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.5rem;
+            padding: 15px 30px;
+            border: 3px solid #ffd700;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.4);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .book-btn:hover {
+            background-color: #d32f2f;
+            transform: scale(1.05);
+        }
+
+        /* The Hidden Book Contents Section */
+        .book-content {
+            display: none; /* Stays hidden until the button is clicked */
+            background-color: #fff9e6; /* Old parchment paper look */
+            border: 2px solid #d4af37;
+            border-radius: 8px;
+            margin-top: 25px;
+            padding: 20px;
+            color: #2b1a08;
+            box-shadow: inset 0px 0px 20px rgba(0,0,0,0.1);
+        }
+
+        .book-content h2 {
+            font-family: 'Fredoka', sans-serif;
+            color: #8b0000;
+            border-bottom: 2px dashed #b5a275;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        /* Styling for the beautiful legacy story paragraphs */
+        .legacy-story {
+            text-align: left;
+            font-size: 1.15rem;
+            line-height: 1.7rem;
+            color: #3a220f;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .name-list {
+            list-style-type: none;
+            padding: 0;
+            font-size: 1.3rem;
+            line-height: 2rem;
+            font-weight: 600;
+            border-top: 2px dashed #b5a275;
+            padding-top: 15px;
+            text-align: center;
+        }
+
+        .name-list li {
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="santa-cabin-title">Santa's Cabin</h1>
+    <div class="subtitle">Interactive Workshop Dashboard</div>
+
+    <div class="desk-container">
+        
+        <button class="book-btn" onclick="toggleBook()">📖 Open the Big Book</button>
+
+        <div class="book-content" id="familyBook">
+            <h2>The Inspiration & Legacey</h2>
+            
+            <p class="legacy-story">
+                <p class="legacy-story">
+    This app stands as a living tribute to my Grandpa, the man who raised me and shaped the person I am today. My fondest memories trace back to winters in Somers, Montana. After the plates were cleared and our own gifts were unwrapped, our entire family—my grandparents, my brothers, and I—would package up food and presents to bring to a family friend. It was a quiet, beautiful tradition rooted in nothing but kindness.
+    <br><br>
+     The real magic happened when the house was buzzing with family, the front door would burst open, and there he was: fully dressed as Santa Claus, with one of my brothers by his side as an elf. The room would light up as he pulled cards, candy, and surprises from his classic bag. In those moments, there was a profound sense of safety and peace. Of course he couldn't have pulled off all the Christmas magic without his Mrs Clause, While my Grandpa brought the performance my Grandma was the architect of the magic. She is still with us today keeping that same bright spark alive. It felt like the very definition of home.
+    <br><br>
+    The depth of his generosity stayed with me so deeply that, years later, we used his original Santa suit to my mom's house, passing the magic down to the next generation of children. My grandpa never lectured me on how to live; he simply showed me. He lived with a rare humility, a fierce honesty, and a golden rule: say what you mean, and mean what you say. He was the greatest man I’ve ever known. I built this to extend the peace, joy, and genuine care he carried every day to anyone who needs it now. He taught me that people matter, and I want to keep his promise alive.
+ <br><br>
+</p>
+<div style="text-align: center;"><img src="Grandparents.jpg" alt="vintage photo of grandparents" style="max-width: 300px; height: auto; display: inline-block;"></div>
+<div style="text-align: center; margin-top: 15px;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Festive_Christmas_Wreath.svg/1200px-Festive_Christmas_Wreath.svg.png" alt="Festive Christmas Wreath" style="width: 75px; height: auto;">
+
+          <ul class="name-list">
+                <li>🎄 Cole (Good List)</li>
+                <li>⭐ Gage</li>
+                <li>🎁 Misty</li>
+                <li>❄️ Wyatt</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleBook() {
+            var book = document.getElementById("familyBook");
+            if (book.style.display === "none" || book.style.display === "") {
+                book.style.display = "block"; // Shows the book
+            } else {
+                book.style.display = "none"; // Closes the book if clicked again
+            }
+        }
+    </script>
+
+</body> 
+</html>
+
+
+
+
+
