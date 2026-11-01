@@ -173,6 +173,29 @@
 </body> 
 </html>
 
+<style>
+  .candy-cane-btn {
+    background: repeating-linear-gradient(45deg, #d32f2f, #d32f2f 15px, #ffffff 15px, #ffffff 30px);
+    color: #054726;
+    font-size: 1.2rem;
+    font-weight: 800;
+    padding: 12px 28px;
+    border: 3px solid #054726;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.2s;
+  }
+  .candy-cane-btn:hover {
+    transform: scale(1.08);
+  }
+</style>
+
+<div style="display: flex; justify-content: flex-end; margin: 30px 0;">
+  <button class="candy-cane-btn" onclick="document.getElementById('page1').style.display='none'; document.getElementById('page2').style.display='block';">
+    Turn Page 🍬 ➜
+  </button>
+</div>
 
 
 
