@@ -197,8 +197,20 @@
   </button>
 </div>
 
-<div id=page2' style=display: none;"></div>
-<hi>Santa's Naughty or Nice Book</hi>
-<p>Enter your name below to check Santa's official list</p>
+<div id="page-2" class="page">
+    <h2>Santa's Naughty or Nice List</h2>
+<p>Enter your name below to check the full list:</p>
+    <input type="text" id="user-name" placeholder="Your name here">
+<button id="check-list-btn" type="button">Check List</button>
+</div>
+<script>const turnBtn = document.getElementById('turn-page-btnE
+const page1 = document.getElementById('page-1);
+const page = document.getElementById('page-2');
+turnBtn.addEventListener('click', () => {
+page1.classList.add('hidden');
+page2.classList.remove('hidden');
+});
+</script> 
+
 
 
