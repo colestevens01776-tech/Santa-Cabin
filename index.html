@@ -194,12 +194,12 @@
 <button id="check-list-btn" type="button">Check List</button>
 </div>
 <script>
-const turnBtn = document.getElementById('turn-page-btnE
+const turnBtn = document.getElementById('turn-page-btn');
 const page1 = document.getElementById('page-1);
-const page = document.getElementById('page-2');
+const page2 = document.getElementById('page-2');
 turnBtn.addEventListener('click', () => {
-page1.classList.add('hidden');
-page2.classList.remove('hidden');
+page1.classList.toggle('hidden');
+page2.classList.toggle('hidden');
 });
 </script> 
 
